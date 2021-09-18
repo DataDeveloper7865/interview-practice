@@ -1,0 +1,6 @@
+.component1 {
+    display: flex;
+    align-content: space-between; 
+    justify-content: space-between;
+    background-color: aqua;
+}
