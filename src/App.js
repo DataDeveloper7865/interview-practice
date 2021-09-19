@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Component1 from './components/component1/component1';
 import Component2 from './components/component2/component2';
+import UseEffectEx from './components/useEffectExample/useEffectEx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <Component1 />
       <Component2 />
+      <UseEffectEx />
     </div>
   );
 }
