@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react';
+import Axios from 'axios';
 
 function AxiosUseEffect() {
     const [ userName, setUserName ] = useState('steve');
@@ -10,10 +11,11 @@ function AxiosUseEffect() {
         async function fetchUser() {
 
             try {
-                const userResult = await Axios.get(URL);
-                setProfile(userResult.data);
+                const userResult = await Axios.get(`https://jsonplaceholder.typicode.com/posts/2`);
+                console.log(userResult.data.title);
+                setProfile(userResult.data.title);
             } catch (error) {
-                setError(error.message)
+                // setError(error.message)
                 console.log(error);
             } finally {
                 setIsLoading(false);
@@ -28,7 +30,7 @@ function AxiosUseEffect() {
     else if (error) return <b> Oh no! {error} </b>
     else return (
         <div>
-            <b>{profile.name}</b>
+            <b>{profile}</b>
         </div>
     )
 }
