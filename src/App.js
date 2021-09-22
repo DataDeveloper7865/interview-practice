@@ -6,6 +6,8 @@ import UseEffectEx from './components/useEffectExample/useEffectEx';
 import Booklist from './components/books';
 import OrderList from './components/orderList.js/OrderList';
 import { useState } from 'react/cjs/react.development';
+import AxiosUseEffect from './components/axiosUseEffectExample/AxiosUseEffect';
+import FetchUseEffect from './components/fetchUseEffectExample/FetchUseEffect';
 
 function App() {
   const [books, setBooks] = useState(Booklist)
@@ -32,6 +34,8 @@ function App() {
       <button onClick={orderBooksByRating}> Order Da Books By Rating </button>
       <button onClick={orderBooksByDate}> Order Da Books By Date </button>
       <OrderList books={books} />
+      <AxiosUseEffect />
+      <FetchUseEffect />
     </div>
   );
 }
